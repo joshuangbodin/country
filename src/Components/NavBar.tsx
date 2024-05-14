@@ -4,9 +4,7 @@ type Props = {}
 
 const NavBar = ({}: Props) => {
 
-    const HandleClick = ()=>{
-        window.ch;
-    }
+    
   return (
     <div className='w-full flex gap-12  h-28 fixed items-center top-0 bg-slate-900'>
         <h3 className=' font-worksans text-xl text-white uppercase font-bold p-4 '>Countries <p className='text-sm text-slate-600 '>by Joshua</p> </h3>
