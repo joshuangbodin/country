@@ -5,11 +5,11 @@ import { Context } from "../App";
 interface Props {}
 
 const NavBar = ({}: Props) => {
-  const [toggleButton , setToggleButton] = useState<string>("[1px]");
+  const [toggleButton , setToggleButton] = useState<string>("1");
   const [mode , setMode] = useContext(Context)
 
   const toggle = ()=>{
-    if(toggleButton === "[1px]"){
+    if(toggleButton === "1"){
       setToggleButton("6")
       setMode(!mode);
       console.log(mode)
@@ -28,11 +28,11 @@ const NavBar = ({}: Props) => {
         </h3>
       </a>
       <div className="flex gap-2">
-        <MoonIcon />
-        <span onClick={toggle} className={`w-12 bg-slate-600 pl-${toggleButton} pr-[1px] block h-6 rounded-full inset-3 `}>
-          <span className="w-6 bg-slate-800 h-6 block rounded-full "></span>
+        {mode?<SunIcon />:<MoonIcon />}
+        <span onClick={toggle} className={mode? `w-10 bg-slate-600  pr-[1px] block h-6 rounded-full inset-3 mr-12 border border-black hover:bg-slate-500`: `w-10 bg-slate-600  pr-[1px] block h-6 rounded-full inset-3 border border-white mr-12 hover:bg-slate-500`}>
+            
         </span>
-        <SunIcon className="mr-12"/>
+        
       </div>
     </div>
   );
