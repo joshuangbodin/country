@@ -4,6 +4,8 @@ import { SearchName } from "../api";
 import { uniType } from "../Company";
 import { formatPopulation } from "../utilities/populationFormat";
 import { Context } from "../App";
+import { ArrowLeft } from "lucide-react";
+
 
 interface Props {}
 
@@ -19,14 +21,20 @@ const Country = ({}: Props) => {
       data.then((res) => {
         console.log(res.data[0]);
         setInfo(res.data[0]);
-      });
+      }).catch();
     }
   }, []);
+  const goback =()=>{
+    history.back()
+  }
   return (
     <div className={mode? "w-full  min-h-screen font-worksans flex flex-col justify-center items-center  text-black" :"w-full  min-h-screen font-worksans flex flex-col justify-center items-center  text-white"}>
       <div className={mode? "w-5/6 p-12 min-h-screen  bg-slate-300 md:flex rounded-md gap-4 mt-32" :"w-5/6 p-12 min-h-screen  bg-slate-800 md:flex rounded-md gap-4 mt-32 "}>
+        <div>
+          <button className=" w-8 h-8 rounded-full hover:bg-slate-500 flex justify-center items-center" onClick={goback}><ArrowLeft/></button>
+        </div>
       <div >
-        <h3 className=" text-white font-bold uppercase mb-4 text-3xl">
+        <h3 className={mode?" text-black font-bold uppercase mb-4 text-3xl":" text-white font-bold uppercase mb-4 text-3xl"}>
           {info?.name.common}
         </h3>
         <div className=" flex flex-row md:flex-col gap-4 w-full md:w-2/3">

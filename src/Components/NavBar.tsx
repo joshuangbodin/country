@@ -29,7 +29,7 @@ const NavBar = ({}: Props) => {
       </a>
       <div className="flex gap-2">
         {mode?<SunIcon />:<MoonIcon />}
-        <span onClick={toggle} className={mode? `w-10 bg-slate-600  pr-[1px] block h-6 rounded-full inset-3 mr-12 border border-black hover:bg-slate-500`: `w-10 bg-slate-600  pr-[1px] block h-6 rounded-full inset-3 border border-white mr-12 hover:bg-slate-500`}>
+        <span onClick={toggle} className={mode? `w-10 bg-green-900  pr-[1px] block h-6 rounded-full inset-3 mr-12  hover:bg-slate-500`: `w-10 bg-red-900  pr-[1px] block h-6 rounded-full inset-3   mr-12 hover:bg-slate-500`}>
             
         </span>
         
