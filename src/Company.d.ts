@@ -7,7 +7,7 @@ export interface uniType{
     cca3: string;
     coatOfArms: {png: 'https://mainfacts.com/media/images/coats_of_arms/md.png', svg: 'https://mainfacts.com/media/images/coats_of_arms/md.svg'}
     continents: [string]
-    currencies: object;
+    currencies: {name:{name:string , symbol:string}};
     flags:{png :"" , svg:""}
     independent: boolean;
     Languages: object;

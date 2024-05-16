@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { json, useParams } from "react-router-dom";
 import { SearchName } from "../api";
 import { uniType } from "../Company";
 import { formatPopulation } from "../utilities/populationFormat";
@@ -46,7 +46,7 @@ const Country = ({}: Props) => {
           </div>
           <div>
             
-            <img className="w-full md:w-full md:h-80 object-cover" src={info?.coatOfArms.svg} alt="no image" />
+            <img className="w-full md:w-full md:h-auto object-cover" src={info?.coatOfArms.svg} alt="no image" />
           </div>
         </div>
       </div>
@@ -60,18 +60,18 @@ const Country = ({}: Props) => {
         <p className="h-12 mb-0.5">
           <strong>Capital:</strong> {info?.capital}
         </p>
-        <p className="h-12 mb-0.5">
+        <p className="m-h-12  mb-0.5">
           <strong>Alt Spellings:</strong> {info?.altSpellings}
         </p>
         <p className="h-12 mb-0.5">
           <strong>cca2:</strong> {info?.cca2}
         </p>
         <p className="h-12 mb-0.5">
-          <strong>Name:</strong> {info?.independent}
+          <strong>Region:</strong> {info?.region}
         </p>
         <p className="h-12 mb-0.5">
           <strong>independent:</strong>{" "}
-          {info?.name.official ? <span>true</span> : <span>false</span>}
+          {info?.independent ? <span>true</span> : <span>false</span>}
         </p>
         <p className="h-12 mb-0.5">
           <strong>Population:</strong> {formatPopulation(info?.population)}
