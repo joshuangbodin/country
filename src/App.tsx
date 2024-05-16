@@ -1,7 +1,13 @@
+
+//routing imports
 import { Routes, Route } from "react-router-dom";
+//page imports
 import Home from "./pages/home";
 import Country from "./pages/country";
+
+//navbar import
 import NavBar from "./Components/NavBar";
+//react and useState imports
 import React, { useState } from "react";
 
 export const Context = React.createContext<boolean | any>(null);
@@ -13,7 +19,7 @@ const App = ({}: Props) => {
   return (
     <div
       className={
-        mode
+        mode//changing base layer color based on boolean value
           ? " w-full m-h-full h-auto bg-slate-100 absolute top-0"
           : " w-full h-full bg-slate-950"
       }

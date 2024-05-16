@@ -1,3 +1,5 @@
+
+//uni type for unary country item
 export interface uniType{
     altSpellings: string[];
     area: number;

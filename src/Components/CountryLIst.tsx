@@ -1,8 +1,9 @@
+//type import
 import { uniType } from "../Company";
 
 import CountryCard from "./CountryCard";
-interface Props {
-  data: uniType[] | undefined;
+interface Props {//passing the array that will be rendered
+  data: uniType[] | undefined;//rem: data maybe undefined if there is no source to fetch from
 }
 
 const CountryLIst = ({ data }: Props) => {

@@ -1,13 +1,20 @@
+//icon imports
 import { MoonIcon, SunIcon } from "lucide-react";
+//state and memory management Hooks imports
 import { useContext, useState } from "react";
+
+//ContextProvider Imports
 import { Context } from "../App";
 
 interface Props {}
 
 const NavBar = ({}: Props) => {
+  //use state and mode context to mutate the theme
   const [toggleButton, setToggleButton] = useState<string>("1");
   const [mode, setMode] = useContext(Context);
 
+
+  //toggling fxn with Bit based concept
   const toggle = () => {
     if (toggleButton === "1") {
       setToggleButton("6");
@@ -22,7 +29,7 @@ const NavBar = ({}: Props) => {
   return (
     <div
       className={
-        mode
+        mode //use mode to toggle styles
           ? "w-full flex gap-12  h-28 fixed  text-black justify-between items-center top-0 bg-slate-300"
           : "w-full flex gap-12  h-28 fixed  text-white justify-between items-center top-0 bg-slate-900"
       }
