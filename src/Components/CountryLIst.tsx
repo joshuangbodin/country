@@ -22,7 +22,7 @@ const CountryLIst = ({ data }: Props) => {
             />
           ))
         ) : (
-          <p className=" text-red-700 text-xl font-bold">no Result</p>
+          <p className=" text-red-700 text-xl font-bold">Please Check your Network and try Again</p>
         )}
       </div>
     </div>
