@@ -38,7 +38,7 @@ const GetAllCountries = ({ HandleClick, HandleChange, id }: Props) => {
         }
         onClick={HandleClick}
       >
-        Get all Countries
+        all Countries
       </button>
     </div>
   );
